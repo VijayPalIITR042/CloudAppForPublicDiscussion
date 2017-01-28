@@ -1,0 +1,40 @@
+<head>
+  <title>Cloud App</title>
+</head>
+
+<body>
+  <div class="jumbotron">
+    {{#if currentUser}}
+    <button class="btn btn-danger logout">Log Out</button>
+     {{/if}} 
+    <h2>Cloud App For Public discussion</h2>
+	  <h5>Developed By Vijay Pal</h5>
+  </div>
+  <div class="container">
+    {{log currentUser}}
+    <div align="center">
+      {{#unless currentUser}}
+      <button type="button" class="btn btn-primary">{{> loginButtons}}</button>
+      {{/unless}}
+    </div>
+    {{#if currentUser}}
+    <form class="new-comment" method="POST">
+      <input type="text" name="comment" placeholder="Enter your comment here ..." class="form-control" />
+    </form>
+    <ul class="list-group">
+      {{#each ShowComments}} 
+        {{>comment}}
+      {{/each}}
+    </ul>
+    {{/if}}
+  </div>
+</body>
+
+<template name="comment">
+  <li class="list-group-item"><span>{{text}}</span>
+  {{log isowner}}
+    <span class="badge delete temp">&times;</span>
+    {{log owner}}
+    <span class="badge">{{email}}</span>
+  </li>
+</template>

@@ -1,0 +1,46 @@
+/* CSS declarations go here */
+ul{
+    margin-top: 5em;
+}
+button a{
+    text-decoration: none !important;
+    color: #000 !important;
+}
+.accounts-dialog{
+    width: 320px;
+}
+.accounts-dialog input{
+    width: 80% !important;
+    float: right;
+}
+#login-email-label-and-input{
+    margin-bottom: 1em;
+}
+form{
+    margin-top: 2em;
+}
+.logout{
+    float: right;
+    position: relative;
+    margin-top: -1em;
+    margin-right: 32px;;
+    z-index: 1;
+	color:blue;
+}
+div.jumbotron{
+    z-index: -1;
+}
+.temp{
+	color: red;background: transparent;font-size:1.2em;cursor:pointer;
+	
+}
+h2{
+	color:skyblue;
+	text-align: center;
+}
+h5{
+	color:purple;
+	float: right;
+}
+
+
